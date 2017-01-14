@@ -1,0 +1,9 @@
+[contenteditable] {
+  cursor: url('pencil.png') 10 5, auto;
+}
+
+[contenteditable=true] {
+  border: 2px dotted #ccc;
+  font-family: $bodyFont;
+  background-color: #eee;
+}

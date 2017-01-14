@@ -1,0 +1,22 @@
+<button ng-click="song.login()" class="login" >Login with Spotify</button>
+
+<ul class="searchlist">
+  <li ng-repeat="result in song.searchResults" class="searchlist__item">
+    <div class="searchlist__details">
+      <img class="searchlist__item-image" ng-src="{{result.images[1].url}}" alt="{{result.album.name}} {{result.name}}">
+      <div>
+        <h3>{{result.name}}</h3>
+        <button ng-click="song.getTracks(result.id)" class="searchlist__item-view-tracks">View Top Tracks</button>
+      </div>
+      </div>
+
+      <ol class="searchlist__tracks alt-rows">
+        <li ng-repeat="songTrack in result.tracks track by songTrack.id " class="searchlist__track" ng-init="ply.add(songTrack)">
+          <button ng-click="ply.remove(songTrack)" class="searchlist__track-add">-</button>
+          <button ng-click="ply.add(songTrack)" class="searchlist__track-add">+</button>
+          {{songTrack.track}}
+          <audio-players song="songTrack"></audio-players>
+        </li>
+      </ol>
+  </li>
+</ul>

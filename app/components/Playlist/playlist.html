@@ -1,0 +1,19 @@
+<div ng-if="ply.last_downloaded">Last exported <em>{{ply.last_downloaded}}</em></div>
+  <ol class="playlist alt-rows">
+  <li class="playlist__header">
+    <span ng-change="ply.rename()" ng-model-options="ply.modelOptions" contenteditable ng-model="ply.list.title">{{ply.list.title}}</span>
+    <button ng-click="ply.download()" class="playlist__download">Export</button>
+  </li>
+  <li ng-repeat="item in ply.list.songs track by item.id" class="playlist__item">
+    <div class="playlist__item-image-edit">
+      <img ng-click="editImgSrc=!editImgSrc" ng-src="{{item.customImage}}" alt="Custom image for {{item.track}}" class="playlist__item-image" />
+      <h5 ng-if="editImgSrc">Click to edit image link</h5>
+      <span ng-if="editImgSrc" contenteditable ng-model="item.customImage" class="playlist__item-note">{{item.customImage}}</span>
+    </div>
+    <div class="playlist__detail">
+      <h4>{{item.artist}}</h4>
+      <span>{{item.track}} from <em>{{item.album}}</em></span>
+    </div>
+    <div ng-change="ply.note(item.id)" ng-model-options="ply.modelOptions" contenteditable ng-model="item.note" class="playlist__item-note">{{item.note}}</div>
+  </li>
+</ol>

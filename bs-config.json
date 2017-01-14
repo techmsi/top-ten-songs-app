@@ -1,0 +1,7 @@
+{
+  "port": 3010,
+  "browser": "google chrome",
+  "server": {
+    "baseDir": "./public"
+  }
+}

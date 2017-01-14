@@ -1,0 +1,113 @@
+{
+   "login":"techmsi",
+   "id":1686333,
+   "avatar_url":"https://avatars.githubusercontent.com/u/1686333?v=3",
+   "gravatar_id":"",
+   "url":"https://api.github.com/users/techmsi",
+   "html_url":"https://github.com/techmsi",
+   "followers_url":"https://api.github.com/users/techmsi/followers",
+   "following_url":"https://api.github.com/users/techmsi/following{/other_user}",
+   "gists_url":"https://api.github.com/users/techmsi/gists{/gist_id}",
+   "starred_url":"https://api.github.com/users/techmsi/starred{/owner}{/repo}",
+   "subscriptions_url":"https://api.github.com/users/techmsi/subscriptions",
+   "organizations_url":"https://api.github.com/users/techmsi/orgs",
+   "repos_url":"https://api.github.com/users/techmsi/repos",
+   "events_url":"https://api.github.com/users/techmsi/events{/privacy}",
+   "received_events_url":"https://api.github.com/users/techmsi/received_events",
+   "type":"User",
+   "site_admin":false,
+   "name":"Sophie Idromenos",
+   "company":null,
+   "blog":null,
+   "location":"NYC",
+   "email":null,
+   "hireable":true,
+   "bio":"Engineer",
+   "public_repos":17,
+   "public_gists":1,
+   "followers":2,
+   "following":1,
+   "created_at":"2012-04-27T20:12:49Z",
+   "updated_at":"2016-07-23T00:25:47Z",
+   "followersList":[
+      "klihelp",
+      "morgs32"
+   ],
+   "reposList":[
+      {
+         "name":"autostyles",
+         "description":"NPM module for transforming css into automatic style guides.",
+         "link":"https://github.com/techmsi/autostyles"
+      },
+      {
+         "name":"bootswatch",
+         "description":"Themes for Twitter Bootstrap",
+         "link":"https://github.com/techmsi/bootswatch"
+      },
+      {
+         "name":"circleci",
+         "description":"Circle CI API Ruby Gem",
+         "link":"https://github.com/techmsi/circleci"
+      },
+      {
+         "name":"co-prompt",
+         "description":"sane terminal user-input for node.js using thunks / generators",
+         "link":"https://github.com/techmsi/co-prompt"
+      },
+      {
+         "name":"dancers",
+         "description":"heroku app",
+         "link":"https://github.com/techmsi/dancers"
+      },
+      {
+         "name":"example-js-app",
+         "description":"Javascript example app",
+         "link":"https://github.com/techmsi/example-js-app"
+      },
+      {
+         "name":"generator-factory-component",
+         "description":"Yeoman generator for components",
+         "link":"https://github.com/techmsi/generator-factory-component"
+      },
+      {
+         "name":"generator-generator",
+         "description":"Generate a Yeoman generator",
+         "link":"https://github.com/techmsi/generator-generator"
+      },
+      {
+         "name":"gulp-combine-media-queries",
+         "description":"",
+         "link":"https://github.com/techmsi/gulp-combine-media-queries"
+      },
+      {
+         "name":"js-assessment",
+         "description":"A test-driven approach to assessing JS skills",
+         "link":"https://github.com/techmsi/js-assessment"
+      },
+      {
+         "name":"mental-health-app",
+         "description":"Prototype for mental health web-app using Patient Health Questionnaire (PHQ-9)",
+         "link":"https://github.com/techmsi/mental-health-app"
+      },
+      {
+         "name":"nunjucks",
+         "description":"A powerful templating engine with inheritance, asynchronous control, and more (jinja2 inspired)",
+         "link":"https://github.com/techmsi/nunjucks"
+      },
+      {
+         "name":"nunjucks-date",
+         "description":"Plugin for nunjucks of momentjs' format date",
+         "link":"https://github.com/techmsi/nunjucks-date"
+      },
+      {
+         "name":"speedreader",
+         "description":"A speed reader app for any loaded text.",
+         "link":"https://github.com/techmsi/speedreader"
+      },
+      {
+         "name":"techmsi.github.io",
+         "description":"",
+         "link":"https://github.com/techmsi/techmsi.github.io"
+      }
+   ]
+}

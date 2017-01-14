@@ -1,0 +1,34 @@
+/* Audio Player */
+.audioplayer {
+  /* Player controls */
+  .play, .stop {
+    @extend .dark-button;
+  }
+  .play::after{
+    animation-play-state: paused;
+    content: '\A0\25B6\A0';
+  }
+  .stop::after{
+    animation-play-state: running;
+    content: '\2590\A0\258C';
+  }
+
+  & > * {
+    display: flex;
+    justify-content: space-between;
+  }
+  .marquee {
+    overflow: hidden;
+    white-space: nowrap;
+
+  > span {
+     /* animation: marquee 10s linear infinite; */
+     /* animation-play-state: paused; */
+   }
+  }
+}
+
+@keyframes marquee {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
+}
