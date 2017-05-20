@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const appFolder = 'app';
 
 const pluginsList = [];
@@ -7,7 +6,7 @@ module.exports = {
   entry: `./${appFolder}/client.js`,
   output: {
     path: 'public',
-    filename: 'bundle.js',
+    filename: 'bundle.js'
   },
   devtool: 'source-map',
   watch: false,
@@ -18,17 +17,17 @@ module.exports = {
         loader: 'babel',
         exclude: /node_modules/,
         query: {
-          presets: ['es2015'],
-        },
+          presets: ['es2015']
+        }
       },
       {
         test: /\.html$/,
-        loader: 'html-loader',
-      },
-    ],
+        loader: 'html-loader'
+      }
+    ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['', '.js', '.jsx']
   },
-  plugins: pluginsList,
+  plugins: pluginsList
 };
