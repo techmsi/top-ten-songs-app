@@ -5,5 +5,5 @@ import * as songlistReducer from '../components/Songlist/songlist.reducer';
 
 export default combineReducers(Object.assign(
   songlistReducer,
-  playlistReducer,
+  playlistReducer
 ));
