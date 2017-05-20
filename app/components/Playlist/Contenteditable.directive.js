@@ -1,13 +1,13 @@
 class ContenteditableDirective {
-  constructor($ngRedux) {
+  constructor ($ngRedux) {
     this.restrict = 'A';
     this.require = 'ngModel';
   }
 
-  link(scope, element, attrs, ngModel) {
-    const isImage = element[0].tagName.toLowerCase() === 'img';
+  link (scope, element, attrs, ngModel) {
+    // const isImage = element[0].tagName.toLowerCase() === 'img';
 
-    function read() {
+    function read () {
       ngModel.$setViewValue(element.text());
     }
 
@@ -35,7 +35,6 @@ class ContenteditableDirective {
     });
   }
 }
-
 
 ContenteditableDirective.$inject = ['$ngRedux'];
 

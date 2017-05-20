@@ -1,51 +1,51 @@
 import { mapDispatchToPropsHelper } from '../../util/helpers';
 
 class PlaylistController {
-  constructor($ngRedux) {
+  constructor ($ngRedux) {
     this.store = $ngRedux;
 
     this.modelOptions = {
       updateOn: 'blur',
       debounce: {
         default: 1000,
-        blur: 0,
-      },
+        blur: 0
+      }
     };
   }
 
-  mapStateToThis(state) {
+  mapStateToThis (state) {
     return {
       list: state.playlist,
-      last_downloaded: state.playlist.last_downloaded,
+      last_downloaded: state.playlist.last_downloaded
     };
   }
 
-  $onInit() {
+  $onInit () {
     this.unsubscribe = this.store.connect(this.mapStateToThis, mapDispatchToPropsHelper)(this);
     this.initializePlaylist();
   }
 
-  $onDestroy() {
+  $onDestroy () {
     this.unsubscribe();
   }
 
-  rename() {
+  rename () {
     this.updatePlaylistTitle();
   }
 
-  note(id) {
+  note (id) {
     this.updatePlaylistNote(id);
   }
 
-  add(item) {
+  add (item) {
     this.addSongToPlaylist(item);
   }
 
-  remove(id) {
+  remove (id) {
     this.removeSongFromPlaylist(id);
   }
 
-  download() {
+  download () {
     this.downloadPlaylist();
   }
 }

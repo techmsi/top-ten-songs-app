@@ -2,7 +2,7 @@ import controller from './Playlist.controller';
 import template from './playlist.html';
 
 class PlaylistDirective {
-  constructor() {
+  constructor () {
     this.restrict = 'E';
     this.template = template;
     this.controller = controller;
