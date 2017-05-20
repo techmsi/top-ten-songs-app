@@ -31,7 +31,8 @@
 
   &__item-image {
     box-shadow: 1px 1px 10px #222;
-    height: 8rem;
+    border-radius: 50%;
+    @extend .maintain-aspect-ratio;
   }
 
   &__item-image span {

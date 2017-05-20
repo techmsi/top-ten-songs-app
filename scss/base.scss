@@ -22,6 +22,10 @@ ul,ol,button{
   padding: 0;
 }
 
+ul, ol{
+  list-style: none;
+}
+
 b {
   font-weight: bold;
 }
@@ -66,6 +70,13 @@ button {
 }
 
 /* Shared styles */
+// Forces images to fit inside same area & maintain aspect ratio.
+.maintain-aspect-ratio {
+  height: 10rem;
+  object-fit: cover;
+  overflow: hidden;
+  width: 10rem;
+}
 
 .dark-button {
   background-color: #111;

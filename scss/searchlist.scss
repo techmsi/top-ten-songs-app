@@ -14,37 +14,51 @@
   }
 
   &__item {
+    display: flex;
+    justify-content: space-between;
     list-style: none;
     margin: 1rem 0;
 
     &-image {
-      height: auto;
-      width: 10rem;
+      @extend .maintain-aspect-ratio;
       border: 3px solid #fff;
       box-shadow: 1px 1px 10px #222;
-      min-height: 10rem;
-      max-width: 10rem;
     }
-
-    &-view-tracks {
-      @extend .dark-button;
-      width: 100%;
-    }
-  }
-
-  &__details {
-    max-width: 10rem;
   }
 
   &__tracks {
+    border-radius: .25rem;
+    display: flex;
+    flex: 0 0 12rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-left: .75rem;
+    transition: all 500ms ease-in-out;
   }
 
   &__tracks > * {
+    align-items: center;
+    margin: .25rem;
+    border-radius: .25rem;
     display: flex;
+    flex: 1;
+    justify-content: space-between;
+    padding: 0 .5rem;
   }
 
-  &__track-add {
-    padding: .25rem;
-    @extend .dark-button;
+  &__details {
+    cursor: pointer;
+    max-width: 10rem;
+
+    &.on ~ .searchlist__tracks {
+      flex:2;
+    }
   }
+
+  &__details  ~ &__tracks {
+    flex: 0;
+  }
+
+
+
 }
