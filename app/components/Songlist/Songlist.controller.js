@@ -1,36 +1,36 @@
 import { mapDispatchToPropsHelper } from '../../util/helpers';
 
 class SongController {
-  constructor($ngRedux, Spotify) {
+  constructor ($ngRedux, Spotify) {
     this.store = $ngRedux;
     this.Spotify = Spotify;
   }
 
-  mapStateToThis(state) {
+  mapStateToThis (state) {
     return {
-      searchResults: state.searchResults,
-    }
+      searchResults: state.searchResults.results
+    };
   }
 
-  $onInit() {
+  $onInit () {
     this.unsubscribe = this.store.connect(this.mapStateToThis, mapDispatchToPropsHelper)(this);
   }
 
-  $onDestroy() {
+  $onDestroy () {
     this.unsubscribe();
   }
 
-  getTracks(id) {
+  getTracks (id) {
     this.addSongTracksToSonglist(id);
   }
 
-  login() {
+  login () {
     this.Spotify.login()
     .then(token => {
       console.info(`Logged In: ${token}`);
 
       this.Spotify.setAuthToken(token);
-      localStorage.setItem('spotify-token', token);
+      window.localStorage.setItem('spotify-token', token);
       this.auth = {};
       this.auth = true;
     })

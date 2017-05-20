@@ -1,11 +1,11 @@
 <form class="searchform">
   <div class="searchform__options">
     <label ng-repeat="searchBy in search.searchByOptions">
-      <input type="radio" ng-model="search.searchByOption" value="{{searchBy.value}}" ng-change="search.searchArtist()">
+      <input type="radio" ng-model="search.searchByOption" value="{{searchBy.value}}" ng-change="search.search()">
       <span>{{searchBy.label}}</span>
     </label>
   </div>
 <div>
-  <input type="text" class="searchform__text" placeholder="Enter an {{search.searchByOption}}" ng-model="search.searchartist" ng-init="search.searchArtist()" ng-change="search.searchArtist()" placeholder="Search for an artist">
+  <input type="text" class="searchform__text" placeholder="Enter an {{search.searchByOption}}" ng-model="search.searchartist" ng-init="search.search()" ng-change="search.search()" placeholder="Search for an artist">
 </div>
 </form>

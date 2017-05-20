@@ -2,7 +2,7 @@ import controller from './SonglistSearch.controller';
 import template from './songlist-search.html';
 
 class SonglistSearchDirective {
-  constructor() {
+  constructor () {
     this.restrict = 'E';
     this.template = template;
     this.controller = controller;

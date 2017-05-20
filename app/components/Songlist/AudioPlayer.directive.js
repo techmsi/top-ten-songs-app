@@ -4,28 +4,28 @@ class AudioPlayerDirectiveController {
     this.audio.src = this.song.preview_url;
     this.on = true;
   }
-  playTrack(index) {
+  playTrack (index) {
     this.on = !this.on;
 
-    if(this.on) {
+    if (this.on) {
       this.pause();
     } else {
       this.play();
     }
   }
-  stop() {
+  stop () {
     if (this.audio.src) {
       this.audio.pause();
       this.audio.currentTime = 0.0;
     }
   }
-  pause() {
+  pause () {
     if (this.audio.src) {
       this.audio.pause();
     }
   }
 
-  play() {
+  play () {
     if (this.audio.src) {
       this.audio.play();
     }
@@ -33,11 +33,11 @@ class AudioPlayerDirectiveController {
 }
 
 class AudioPlayerDirective {
-  constructor() {
+  constructor () {
     this.restrict = 'E';
     this.scope = {
       song: '='
-    }
+    };
     this.template = `
     <div class="audioplayer">
       <span class="marquee"><span>{{aud.song.name}}</span></span>
